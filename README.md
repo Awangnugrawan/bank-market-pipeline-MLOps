@@ -1,1 +1,17 @@
-# bank-market-pipeline-MLOps
+# Final Submission MLOps Dicoding: Bank Marketing Analysis: Understanding Deposit Decisions
+Nama: Awang Mulya Nugrawan
+
+Username dicoding: Awang Nugrawan
+
+| | Deskripsi |
+| ----------- | ----------- |
+| Dataset | [Bank_Market_dataset](https://www.kaggle.com/datasets/janiobachmann/bank-marketing-dataset) |
+| Masalah | Salah satu tantangan yang dihadapi oleh bank adalah kesulitan untuk memprediksi dengan tepat apakah seorang nasabah akan bersedia melakukan deposito atau tidak. Hal ini menjadi krusial dalam pengambilan keputusan pemasaran dan alokasi sumber daya yang efektif untuk strategi kampanye. Oleh karena itu, penggunaan dataset seperti 'Bank Marketing Dataset' menjadi penting dalam upaya untuk meningkatkan kemampuan bank dalam memprediksi dan mengidentifikasi nasabah yang potensial untuk berlangganan deposito. |
+| Solusi machine learning | Solusi machine learning yang dapat diterapkan pada Bank Marketing Dataset ini adalah membangun model klasifikasi untuk melakukan prediksi apakah nasabah akan berlangganan deposito atau tidak.Solusi ini dapat membantu bank dalam mengoptimalkan upaya pemasaran mereka dengan mengidentifikasi calon nasabah yang lebih cenderung berlangganan deposito jangka waktu, sehingga mereka dapat mengalokasikan sumber daya pemasaran dengan lebih efisien.|
+| Metode pengolahan | Pada tahap awal dilakukan split data menjadi data train dan data eval dalam perbandingan 8:2 selama tahap Data Ingestion. Selanjutnya, data divalidasi melalui analisis statistik dan skema. Langkah selanjutnya adalah Data Preprocessing, yang melibatkan transformasi fitur kategorikal dan numerik. Fitur kategorikal diubah menjadi bentuk numerik melalui metode one-hot-encoding, sementara fitur numerik dinormalisasi untuk memastikan bahwa semua nilai berada dalam rentang yang sama |
+| Arsitektur model | Model ini digunakan untuk masalah klasifikasi biner dan menerima berbagai fitur kategorikal dalam bentuk one-hot encoding serta fitur numerikal. Arsitektur model ini terdiri dari beberapa lapisan Dense dengan aktivasi ReLU yang dihubungkan dengan lapisan-lapisan sebelumnya. Model ini juga memiliki dropout untuk mencegah overfitting. Output dari model ini adalah prediksi probabilitas untuk klasifikasi biner. Model ini akan dikompilasi menggunakan optimizer Adam dengan tingkat pembelajaran yang disesuaikan dengan hyperparameter yang telah diberikan.|
+| Metrik evaluasi | Metrik yang digunakan untuk mengevaluasi performa model ada beberapa yaitu: TFMA Example Count, AUC (Area Under the ROC Curve), Binary Accuracy, False Negatives, False Positive, True Negatives, dan True Positive. |
+| Performa model | Performa model yang telah dibuat tergolong bagus karena berhasil mengklasifikasikan prediksi nasabah akan melakukan deposito atau tidak setelah dilakukan pengujian dan dengan skor binary_accuracy sebesar 90% dan val_binary_accuracy: 83%|
+| Opsi deployment | Proyek machine learning bank market analisis ini berhasil di-deploy menggunakan sebuah layanan platfrom as a service Railway App  yang menyediakan layanan untuk deploying proyek secara gratis dengan limit 500 jam|
+| Web app | [Model serving Railway](https://bankmarket-prediction-production.up.railway.app/v1/models/bank-model/metadata)|
+| Monitoring | Mengimplementasikan sistem monitoring dengan menyinkronkan Prometheus dengan Grafana. Ini memungkinkanntuk membuat dashboard pemantauan yang informatif dan menarik secara visual. Dengan grafana, kita dapat dengan mudah melacak kinerja sistem , menganalisis metrik kunci, dan mengidentifikasi tren yang relevan.  |
